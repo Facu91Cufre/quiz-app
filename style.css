@@ -1,0 +1,119 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    /* dark shades of primary color */
+    --clr-primary-1: hsl(207, 15%, 14%);
+    --clr-primary-2: hsl(202, 100%, 16%);
+    --clr-primary-3: hsl(202, 100%, 20%);
+    --clr-primary-4: hsl(202, 100%, 24%);
+    /*Primary color*/
+    --clr-primary-5: hsl(202, 100%, 40%);
+    /* lighter shades of primary color*/
+    --clr-primary-6: hsl(202, 100%, 68%);
+    --clr-primary-7: hsl(202, 100%, 72%);
+    --clr-primary-8: hsl(202, 100%, 76%);
+    --clr-primary-9: hsl(202, 100%, 80%);
+    --clr-primary-10: hsl(202, 100%, 84%);
+    /* darkest grey used for headings*/
+    --clr-grey-1: hsl(210, 15%, 16%);
+    --clr-grey-2: hsl(210, 16%, 20%);
+    --clr-grey-3: hsl(212, 14%, 24%);
+    /* grey used for paragraphs */
+    --clr-grey-4: hsl(210, 15%, 40%);
+    --clr-white: #f5f5f5;
+    --clr-red-dark: hsl(1, 91%, 40%);
+    --clr-red-light: hsl(1, 91%, 60%);
+    --clr-green-dark: hsl(104, 72%, 52%);
+    --clr-green-light: hsl(104, 72%, 68%);
+    --clr-black: #222;
+    
+}
+/* Body Styles */
+
+body{
+    background-color: rgba(80, 134, 156);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container Styles */
+
+.app{
+    background: var(--clr-white);
+    max-width: 600px;
+    width: 90%;
+    border-radius: 20px;
+    padding: 30px 20px;
+}
+
+/* Title Styles */
+#title{
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--clr-grey-3);
+    font-size: 1.8rem;
+    color: var(--clr-grey-1);
+    font-weight: 700;
+}
+
+#question{
+    margin: 20px 0;
+    font-size: 1.3rem;
+    color: var(--clr-grey-2);
+    font-weight: 500;
+}
+
+/* Buttons Container Styles */
+
+#answer-buttons{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap:10px;
+}
+
+/* Buttons Styles */
+
+.btn{
+    text-align: left;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: var(--clr-grey-4);
+    font-weight: 400;
+    transition: all 0.4s;
+}
+
+.btn:hover{
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    outline: none;
+}
+
+.btn:active{
+    background-color: rgb(122, 121, 121);
+}
+
+/* Next Question Button*/
+
+#next-btn{
+    padding: 7px 9px;
+    margin: 20px auto 0;
+    display: none;
+    width: 120px;
+    background-color: var(--clr-primary-4);
+    border: 1px solid var(--clr-black);
+    border-radius: 4px;
+    cursor:pointer;
+}
+#next-btn:hover{
+    color: var(--clr-white);
+    background-color: var(--clr-primary-2);
+}
