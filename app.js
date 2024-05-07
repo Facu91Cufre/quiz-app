@@ -137,6 +137,7 @@ const selectAnswer = (e) => {
   if (isCorrect) {
     selectedBtn.classList.add("correct");
     score++;
+    console.log(score);
   } else {
     selectedBtn.classList.add("incorrect");
   }
@@ -157,9 +158,9 @@ const showScore = () => {
     questionItem.innerHTML = `${score} de ${questions.length}. Está mal, pero no tan mal.'`;
   } else if (score > 6 && score < 9) {
     questionItem.innerHTML = `${score} de ${questions.length}. Aprobado.`;
-  } else if ((score = 9)) {
-    questionItem.innerHTML = `${score} de ${questions.length}. Pego en el palo!!!`;
-  } else if ((score = 10)) {
+  } else if ((score === 9)) {
+    questionItem.innerHTML = `${score} de ${questions.length}. ¡¡¡Pego en el palo!!!`;
+  } else if ((score === 10)) {
     questionItem.innerHTML = `10 de 10. Epetacula'`;
   }
 
