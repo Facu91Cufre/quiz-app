@@ -151,16 +151,18 @@ const selectAnswer = (e) => {
 
 const showScore = () => {
   resetState();
-  if(score <= 3){
-    questionItem.innerHTML = `Respondiste correctamente ${score} de ${questions.length} :(`;
-  } else if(score > 3 && score <= 6){
-    questionItem.innerHTML = `Respondiste correctamente ${score} de ${questions.length} :|'`;
-  } else if(score > 6 && score <= 9) {
-    questionItem.innerHTML = `Respondiste correctamente ${score} de ${questions.length} :D`;
-  } else if (score = 10) {
-    questionItem.innerHTML = `10 de 10. Epetacula'`
+  if (score <= 3) {
+    questionItem.innerHTML = ` ${score} de ${questions.length}. Burr"E"`;
+  } else if (score > 3 && score <= 6) {
+    questionItem.innerHTML = `${score} de ${questions.length}. Está mal, pero no tan mal.'`;
+  } else if (score > 6 && score < 9) {
+    questionItem.innerHTML = `${score} de ${questions.length}. Aprobado.`;
+  } else if ((score = 9)) {
+    questionItem.innerHTML = `${score} de ${questions.length}. Pego en el palo!!!`;
+  } else if ((score = 10)) {
+    questionItem.innerHTML = `10 de 10. Epetacula'`;
   }
-  
+
   nextBtn.innerHTML = "Play again";
   nextBtn.style.display = "block";
 };
